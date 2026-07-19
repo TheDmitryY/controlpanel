@@ -847,3 +847,56 @@ TypeError: 'coroutine' object is not callable
 2026-07-19 21:11:05,458 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
 2026-07-19 21:11:05,458 - aiogram.dispatcher - INFO - Polling stopped
 2026-07-19 21:11:05,709 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 21:15:28,349 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 21:15:28,357 - __main__ - INFO - Bot startup tasks...
+2026-07-19 21:15:28,357 - __main__ - INFO - Starting bot polling...
+2026-07-19 21:15:28,357 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 21:15:28,557 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 21:15:34,212 - aiogram.event - INFO - Update id=59808765 is handled. Duration 141 ms by bot id=8286876591
+2026-07-19 21:15:35,451 - aiogram.event - INFO - Update id=59808766 is handled. Duration 188 ms by bot id=8286876591
+2026-07-19 21:15:37,010 - aiogram.event - INFO - Update id=59808767 is handled. Duration 98 ms by bot id=8286876591
+2026-07-19 21:15:38,148 - aiogram.event - INFO - Update id=59808768 is handled. Duration 243 ms by bot id=8286876591
+2026-07-19 21:15:39,687 - aiogram.event - INFO - Update id=59808769 is handled. Duration 99 ms by bot id=8286876591
+2026-07-19 21:15:40,674 - aiogram.event - INFO - Update id=59808770 is handled. Duration 190 ms by bot id=8286876591
+2026-07-19 21:15:41,896 - aiogram.event - INFO - Update id=59808771 is handled. Duration 198 ms by bot id=8286876591
+2026-07-19 21:15:42,565 - aiogram.event - INFO - Update id=59808772 is handled. Duration 170 ms by bot id=8286876591
+2026-07-19 21:15:43,764 - aiogram.event - INFO - Update id=59808773 is handled. Duration 133 ms by bot id=8286876591
+2026-07-19 21:15:45,125 - aiogram.event - INFO - Update id=59808774 is handled. Duration 105 ms by bot id=8286876591
+2026-07-19 21:15:45,930 - aiogram.event - INFO - Update id=59808775 is handled. Duration 100 ms by bot id=8286876591
+2026-07-19 21:15:46,515 - aiogram.event - INFO - Update id=59808776 is handled. Duration 105 ms by bot id=8286876591
+2026-07-19 21:15:47,134 - aiogram.event - INFO - Update id=59808777 is handled. Duration 79 ms by bot id=8286876591
+2026-07-19 21:15:49,151 - aiogram.event - INFO - Update id=59808778 is handled. Duration 115 ms by bot id=8286876591
+2026-07-19 21:15:50,297 - aiogram.event - INFO - Update id=59808779 is handled. Duration 98 ms by bot id=8286876591
+2026-07-19 21:15:52,595 - aiogram.event - INFO - Update id=59808780 is handled. Duration 65 ms by bot id=8286876591
+2026-07-19 21:15:53,860 - aiogram.event - INFO - Update id=59808781 is handled. Duration 93 ms by bot id=8286876591
+2026-07-19 21:15:54,933 - aiogram.event - INFO - Update id=59808782 is handled. Duration 67 ms by bot id=8286876591
+2026-07-19 21:16:20,252 - aiogram.event - INFO - Update id=59808783 is handled. Duration 108 ms by bot id=8286876591
+2026-07-19 21:22:50,362 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 21:22:50,363 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 21:22:50,363 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 21:22:50,614 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 21:22:52,969 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 21:22:52,978 - __main__ - INFO - Bot startup tasks...
+2026-07-19 21:22:52,978 - __main__ - INFO - Starting bot polling...
+2026-07-19 21:22:52,978 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 21:22:53,162 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 21:22:55,472 - aiogram.event - INFO - Update id=59808784 is handled. Duration 131 ms by bot id=8286876591
+2026-07-19 21:22:56,507 - aiogram.event - INFO - Update id=59808785 is handled. Duration 107 ms by bot id=8286876591
+2026-07-19 21:22:57,537 - aiogram.event - INFO - Update id=59808786 is handled. Duration 120 ms by bot id=8286876591
+2026-07-19 21:22:58,606 - aiogram.event - INFO - Update id=59808787 is handled. Duration 123 ms by bot id=8286876591
+2026-07-19 21:23:02,599 - aiogram.event - INFO - Update id=59808788 is handled. Duration 115 ms by bot id=8286876591
+2026-07-19 21:23:03,550 - aiogram.event - INFO - Update id=59808789 is handled. Duration 250 ms by bot id=8286876591
+2026-07-19 21:23:04,523 - aiogram.event - INFO - Update id=59808790 is handled. Duration 106 ms by bot id=8286876591
+2026-07-19 21:23:11,383 - aiogram.event - INFO - Update id=59808791 is handled. Duration 129 ms by bot id=8286876591
+2026-07-19 21:23:15,660 - aiogram.event - INFO - Update id=59808792 is handled. Duration 146 ms by bot id=8286876591
+2026-07-19 21:23:23,446 - aiogram.event - INFO - Update id=59808793 is handled. Duration 106 ms by bot id=8286876591
+2026-07-19 21:23:25,197 - aiogram.event - INFO - Update id=59808794 is handled. Duration 96 ms by bot id=8286876591
+2026-07-19 21:23:25,888 - aiogram.event - INFO - Update id=59808795 is handled. Duration 63 ms by bot id=8286876591
+2026-07-19 21:23:26,741 - aiogram.event - INFO - Update id=59808796 is handled. Duration 152 ms by bot id=8286876591
+2026-07-19 21:23:27,460 - aiogram.event - INFO - Update id=59808797 is handled. Duration 117 ms by bot id=8286876591
+2026-07-19 21:23:28,785 - aiogram.event - INFO - Update id=59808798 is handled. Duration 129 ms by bot id=8286876591
+2026-07-19 21:24:16,398 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 21:24:16,398 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 21:24:16,399 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 21:24:16,633 - aiogram.event - INFO - Update id=59808799 is handled. Duration 39942 ms by bot id=8286876591
+2026-07-19 21:24:16,650 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
