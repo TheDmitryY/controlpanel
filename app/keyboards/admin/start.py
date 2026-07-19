@@ -8,10 +8,11 @@ get_admin_keyboard = InlineKeyboardMarkup(
                 InlineKeyboardButton(text="🕹 Гібернація", callback_data="power_menu")
             ],
             [
-                InlineKeyboardButton(text="📦 Завантаження", callback_data="admin_download")
+                InlineKeyboardButton(text="📦 Завантаження", callback_data="admin_download"),
+                InlineKeyboardButton(text="🔔 Сповіщення", callback_data="send_notification"),
             ],
             [
-                InlineKeyboardButton(text="🔔 Сповіщення", callback_data="send_notification"),
+                InlineKeyboardButton(text="️️️️️⬅️ Назад", callback_data="end_configuration"),
             ],
         ]
     )
