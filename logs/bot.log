@@ -1,0 +1,849 @@
+2026-07-19 19:59:49,591 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 19:59:49,595 - __main__ - INFO - Bot startup tasks...
+2026-07-19 19:59:49,595 - __main__ - INFO - Starting bot polling...
+2026-07-19 19:59:49,595 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 19:59:49,746 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 19:59:53,814 - aiogram.event - INFO - Update id=59808636 is handled. Duration 130 ms by bot id=8286876591
+2026-07-19 19:59:55,339 - aiogram.event - INFO - Update id=59808637 is handled. Duration 137 ms by bot id=8286876591
+2026-07-19 20:00:27,889 - aiogram.event - INFO - Update id=59808638 is handled. Duration 349 ms by bot id=8286876591
+2026-07-19 20:00:38,667 - aiogram.event - INFO - Update id=59808639 is handled. Duration 127 ms by bot id=8286876591
+2026-07-19 20:00:42,204 - aiogram.event - INFO - Update id=59808640 is not handled. Duration 137 ms by bot id=8286876591
+2026-07-19 20:00:42,204 - aiogram.event - ERROR - Cause exception while process update id=59808640 by bot id=8286876591
+TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+Traceback (most recent call last):
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 195, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/app/middlewars/admin.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/app/callbacks/start.py", line 120, in callbacks_start
+    await callback.message.edit_text(
+        largest_memory_process_text(), reply_markup=get_configuration_keyboard, parse_mode="HTML"
+    )
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/methods/base.py", line 82, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/client/bot.py", line 514, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 259, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/client/session/aiohttp.py", line 177, in make_request
+    response = self.check_response(
+        bot=bot,
+    ...<2 lines>...
+        content=raw_result,
+    )
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/client/session/base.py", line 121, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: message is not modified: specified new message content and reply markup are exactly the same as a current content and reply markup of the message
+2026-07-19 20:00:45,106 - aiogram.event - INFO - Update id=59808641 is handled. Duration 113 ms by bot id=8286876591
+2026-07-19 20:03:00,860 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 20:03:00,860 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:03:00,860 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 20:03:01,111 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 20:03:04,315 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 20:03:04,320 - __main__ - INFO - Bot startup tasks...
+2026-07-19 20:03:04,320 - __main__ - INFO - Starting bot polling...
+2026-07-19 20:03:04,320 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 20:03:04,512 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:03:12,354 - aiogram.event - INFO - Update id=59808642 is handled. Duration 146 ms by bot id=8286876591
+2026-07-19 20:03:13,628 - aiogram.event - INFO - Update id=59808643 is handled. Duration 107 ms by bot id=8286876591
+2026-07-19 20:03:15,023 - aiogram.event - INFO - Update id=59808644 is handled. Duration 110 ms by bot id=8286876591
+2026-07-19 20:03:15,858 - aiogram.event - INFO - Update id=59808645 is handled. Duration 111 ms by bot id=8286876591
+2026-07-19 20:03:17,807 - aiogram.event - INFO - Update id=59808646 is handled. Duration 73 ms by bot id=8286876591
+2026-07-19 20:03:19,368 - aiogram.event - INFO - Update id=59808647 is handled. Duration 96 ms by bot id=8286876591
+2026-07-19 20:03:29,176 - aiogram.event - INFO - Update id=59808648 is handled. Duration 228 ms by bot id=8286876591
+2026-07-19 20:03:39,885 - aiogram.event - INFO - Update id=59808649 is handled. Duration 155 ms by bot id=8286876591
+2026-07-19 20:03:43,436 - aiogram.event - INFO - Update id=59808650 is handled. Duration 63 ms by bot id=8286876591
+2026-07-19 20:03:44,667 - aiogram.event - INFO - Update id=59808651 is handled. Duration 110 ms by bot id=8286876591
+2026-07-19 20:03:47,660 - aiogram.event - INFO - Update id=59808652 is handled. Duration 103 ms by bot id=8286876591
+2026-07-19 20:03:50,306 - aiogram.event - INFO - Update id=59808653 is handled. Duration 76 ms by bot id=8286876591
+2026-07-19 20:08:01,191 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 20:08:01,192 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:08:01,192 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 20:08:01,444 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 20:08:04,306 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 20:08:04,311 - __main__ - INFO - Bot startup tasks...
+2026-07-19 20:08:04,311 - __main__ - INFO - Starting bot polling...
+2026-07-19 20:08:04,311 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 20:08:04,527 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:08:13,496 - aiogram.event - INFO - Update id=59808654 is handled. Duration 175 ms by bot id=8286876591
+2026-07-19 20:08:15,249 - aiogram.event - INFO - Update id=59808655 is handled. Duration 200 ms by bot id=8286876591
+2026-07-19 20:08:16,415 - aiogram.event - INFO - Update id=59808656 is handled. Duration 96 ms by bot id=8286876591
+2026-07-19 20:08:52,228 - aiogram.event - INFO - Update id=59808657 is handled. Duration 178 ms by bot id=8286876591
+2026-07-19 20:09:14,533 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 20:09:14,533 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:09:14,534 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 20:09:14,785 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 20:09:17,369 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 20:09:17,373 - __main__ - INFO - Bot startup tasks...
+2026-07-19 20:09:17,373 - __main__ - INFO - Starting bot polling...
+2026-07-19 20:09:17,373 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 20:09:17,524 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:09:20,987 - aiogram.event - INFO - Update id=59808658 is handled. Duration 132 ms by bot id=8286876591
+2026-07-19 20:09:22,874 - aiogram.event - INFO - Update id=59808659 is handled. Duration 106 ms by bot id=8286876591
+2026-07-19 20:09:23,719 - aiogram.event - INFO - Update id=59808660 is not handled. Duration 0 ms by bot id=8286876591
+2026-07-19 20:09:24,640 - aiogram.event - INFO - Update id=59808661 is not handled. Duration 0 ms by bot id=8286876591
+2026-07-19 20:09:26,609 - aiogram.event - INFO - Update id=59808662 is not handled. Duration 0 ms by bot id=8286876591
+2026-07-19 20:09:36,424 - aiogram.event - INFO - Update id=59808663 is not handled. Duration 1 ms by bot id=8286876591
+2026-07-19 20:10:22,537 - aiogram.event - INFO - Update id=59808664 is not handled. Duration 0 ms by bot id=8286876591
+2026-07-19 20:10:24,319 - aiogram.event - INFO - Update id=59808665 is handled. Duration 74 ms by bot id=8286876591
+2026-07-19 20:10:26,102 - aiogram.event - INFO - Update id=59808666 is handled. Duration 410 ms by bot id=8286876591
+2026-07-19 20:10:59,325 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 20:10:59,326 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:10:59,326 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 20:10:59,578 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 20:11:02,328 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 20:11:02,333 - __main__ - INFO - Bot startup tasks...
+2026-07-19 20:11:02,333 - __main__ - INFO - Starting bot polling...
+2026-07-19 20:11:02,333 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 20:11:02,507 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:11:06,279 - aiogram.event - INFO - Update id=59808667 is handled. Duration 221 ms by bot id=8286876591
+2026-07-19 20:11:07,920 - aiogram.event - INFO - Update id=59808668 is handled. Duration 250 ms by bot id=8286876591
+2026-07-19 20:11:09,633 - aiogram.event - INFO - Update id=59808669 is handled. Duration 109 ms by bot id=8286876591
+2026-07-19 20:11:12,162 - aiogram.event - INFO - Update id=59808670 is handled. Duration 85 ms by bot id=8286876591
+2026-07-19 20:11:13,835 - aiogram.event - INFO - Update id=59808671 is handled. Duration 126 ms by bot id=8286876591
+2026-07-19 20:11:39,766 - aiogram.event - INFO - Update id=59808672 is handled. Duration 80 ms by bot id=8286876591
+2026-07-19 20:11:44,733 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 20:11:44,734 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:11:44,734 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 20:11:44,985 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 20:11:47,506 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 20:11:47,510 - __main__ - INFO - Bot startup tasks...
+2026-07-19 20:11:47,510 - __main__ - INFO - Starting bot polling...
+2026-07-19 20:11:47,510 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 20:11:47,626 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:12:43,591 - aiogram.event - INFO - Update id=59808673 is handled. Duration 156 ms by bot id=8286876591
+2026-07-19 20:12:44,720 - aiogram.event - INFO - Update id=59808674 is handled. Duration 224 ms by bot id=8286876591
+2026-07-19 20:12:45,490 - aiogram.event - INFO - Update id=59808675 is not handled. Duration 0 ms by bot id=8286876591
+2026-07-19 20:12:46,565 - aiogram.event - INFO - Update id=59808676 is not handled. Duration 0 ms by bot id=8286876591
+2026-07-19 20:12:46,698 - aiogram.event - INFO - Update id=59808677 is not handled. Duration 0 ms by bot id=8286876591
+2026-07-19 20:13:11,203 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 20:13:11,204 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:13:11,204 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 20:13:11,455 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 20:13:14,246 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 20:13:14,251 - __main__ - INFO - Bot startup tasks...
+2026-07-19 20:13:14,251 - __main__ - INFO - Starting bot polling...
+2026-07-19 20:13:14,251 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 20:13:14,436 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:13:17,711 - aiogram.event - INFO - Update id=59808678 is handled. Duration 137 ms by bot id=8286876591
+2026-07-19 20:13:19,266 - aiogram.event - INFO - Update id=59808679 is handled. Duration 109 ms by bot id=8286876591
+2026-07-19 20:13:20,316 - aiogram.event - INFO - Update id=59808680 is handled. Duration 101 ms by bot id=8286876591
+2026-07-19 20:13:21,498 - aiogram.event - INFO - Update id=59808681 is handled. Duration 126 ms by bot id=8286876591
+2026-07-19 20:13:23,014 - aiogram.event - INFO - Update id=59808682 is handled. Duration 183 ms by bot id=8286876591
+2026-07-19 20:13:24,510 - aiogram.event - INFO - Update id=59808683 is handled. Duration 98 ms by bot id=8286876591
+2026-07-19 20:13:26,138 - aiogram.event - INFO - Update id=59808684 is handled. Duration 95 ms by bot id=8286876591
+2026-07-19 20:13:26,922 - aiogram.event - INFO - Update id=59808685 is handled. Duration 96 ms by bot id=8286876591
+2026-07-19 20:13:27,763 - aiogram.event - INFO - Update id=59808686 is handled. Duration 98 ms by bot id=8286876591
+2026-07-19 20:13:29,607 - aiogram.event - INFO - Update id=59808687 is handled. Duration 94 ms by bot id=8286876591
+2026-07-19 20:13:30,802 - aiogram.event - INFO - Update id=59808688 is handled. Duration 104 ms by bot id=8286876591
+2026-07-19 20:13:34,582 - aiogram.event - INFO - Update id=59808689 is handled. Duration 102 ms by bot id=8286876591
+2026-07-19 20:13:36,238 - aiogram.event - INFO - Update id=59808690 is handled. Duration 92 ms by bot id=8286876591
+2026-07-19 20:13:37,380 - aiogram.event - INFO - Update id=59808691 is handled. Duration 99 ms by bot id=8286876591
+2026-07-19 20:13:41,710 - aiogram.event - INFO - Update id=59808692 is handled. Duration 320 ms by bot id=8286876591
+2026-07-19 20:13:42,793 - aiogram.event - INFO - Update id=59808693 is handled. Duration 117 ms by bot id=8286876591
+2026-07-19 20:13:44,296 - aiogram.event - INFO - Update id=59808694 is handled. Duration 100 ms by bot id=8286876591
+2026-07-19 20:13:47,342 - aiogram.event - INFO - Update id=59808695 is handled. Duration 92 ms by bot id=8286876591
+2026-07-19 20:13:48,537 - aiogram.event - INFO - Update id=59808696 is handled. Duration 99 ms by bot id=8286876591
+2026-07-19 20:18:30,562 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 20:18:30,563 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:18:30,563 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 20:18:30,815 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 20:18:33,389 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 20:18:33,394 - __main__ - INFO - Bot startup tasks...
+2026-07-19 20:18:33,394 - __main__ - INFO - Starting bot polling...
+2026-07-19 20:18:33,396 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 20:18:33,582 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:18:38,586 - aiogram.event - INFO - Update id=59808697 is handled. Duration 141 ms by bot id=8286876591
+2026-07-19 20:18:39,994 - aiogram.event - INFO - Update id=59808698 is handled. Duration 102 ms by bot id=8286876591
+2026-07-19 20:18:41,573 - aiogram.event - INFO - Update id=59808699 is handled. Duration 102 ms by bot id=8286876591
+2026-07-19 20:18:44,380 - aiogram.event - INFO - Update id=59808700 is handled. Duration 56 ms by bot id=8286876591
+2026-07-19 20:18:46,446 - aiogram.event - INFO - Update id=59808701 is not handled. Duration 1 ms by bot id=8286876591
+2026-07-19 20:18:46,446 - aiogram.event - ERROR - Cause exception while process update id=59808701 by bot id=8286876591
+UnboundLocalError: cannot access local variable 'text' where it is not associated with a value
+Traceback (most recent call last):
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 195, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/app/middlewars/admin.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/app/callbacks/start.py", line 115, in callbacks_start
+    await callback.message.edit_text(text=text, reply_markup=get_admin_keyboard, parse_mode="HTML")
+                                          ^^^^
+UnboundLocalError: cannot access local variable 'text' where it is not associated with a value
+2026-07-19 20:18:48,976 - aiogram.event - INFO - Update id=59808702 is not handled. Duration 1 ms by bot id=8286876591
+2026-07-19 20:18:48,976 - aiogram.event - ERROR - Cause exception while process update id=59808702 by bot id=8286876591
+UnboundLocalError: cannot access local variable 'text' where it is not associated with a value
+Traceback (most recent call last):
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 195, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/app/middlewars/admin.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/app/callbacks/start.py", line 115, in callbacks_start
+    await callback.message.edit_text(text=text, reply_markup=get_admin_keyboard, parse_mode="HTML")
+                                          ^^^^
+UnboundLocalError: cannot access local variable 'text' where it is not associated with a value
+2026-07-19 20:18:50,072 - aiogram.event - INFO - Update id=59808703 is handled. Duration 108 ms by bot id=8286876591
+2026-07-19 20:18:51,302 - aiogram.event - INFO - Update id=59808704 is handled. Duration 197 ms by bot id=8286876591
+2026-07-19 20:18:52,058 - aiogram.event - INFO - Update id=59808705 is handled. Duration 152 ms by bot id=8286876591
+2026-07-19 20:18:52,540 - aiogram.event - INFO - Update id=59808706 is not handled. Duration 1 ms by bot id=8286876591
+2026-07-19 20:18:52,541 - aiogram.event - ERROR - Cause exception while process update id=59808706 by bot id=8286876591
+UnboundLocalError: cannot access local variable 'text' where it is not associated with a value
+Traceback (most recent call last):
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 195, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/app/middlewars/admin.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/app/callbacks/start.py", line 115, in callbacks_start
+    await callback.message.edit_text(text=text, reply_markup=get_admin_keyboard, parse_mode="HTML")
+                                          ^^^^
+UnboundLocalError: cannot access local variable 'text' where it is not associated with a value
+2026-07-19 20:19:35,372 - aiogram.event - INFO - Update id=59808707 is not handled. Duration 0 ms by bot id=8286876591
+2026-07-19 20:19:35,373 - aiogram.event - ERROR - Cause exception while process update id=59808707 by bot id=8286876591
+UnboundLocalError: cannot access local variable 'text' where it is not associated with a value
+Traceback (most recent call last):
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 195, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/app/middlewars/admin.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/app/callbacks/start.py", line 115, in callbacks_start
+    await callback.message.edit_text(text=text, reply_markup=get_admin_keyboard, parse_mode="HTML")
+                                          ^^^^
+UnboundLocalError: cannot access local variable 'text' where it is not associated with a value
+2026-07-19 20:19:36,522 - aiogram.event - INFO - Update id=59808708 is not handled. Duration 0 ms by bot id=8286876591
+2026-07-19 20:19:36,523 - aiogram.event - ERROR - Cause exception while process update id=59808708 by bot id=8286876591
+UnboundLocalError: cannot access local variable 'text' where it is not associated with a value
+Traceback (most recent call last):
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 195, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/app/middlewars/admin.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/app/callbacks/start.py", line 115, in callbacks_start
+    await callback.message.edit_text(text=text, reply_markup=get_admin_keyboard, parse_mode="HTML")
+                                          ^^^^
+UnboundLocalError: cannot access local variable 'text' where it is not associated with a value
+2026-07-19 20:19:47,524 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 20:19:47,524 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:19:47,525 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 20:19:47,776 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 20:19:50,795 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 20:19:50,799 - __main__ - INFO - Bot startup tasks...
+2026-07-19 20:19:50,799 - __main__ - INFO - Starting bot polling...
+2026-07-19 20:19:50,799 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 20:19:50,961 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:19:55,102 - aiogram.event - INFO - Update id=59808709 is handled. Duration 147 ms by bot id=8286876591
+2026-07-19 20:19:56,528 - aiogram.event - INFO - Update id=59808710 is handled. Duration 118 ms by bot id=8286876591
+2026-07-19 20:19:57,400 - aiogram.event - INFO - Update id=59808711 is handled. Duration 110 ms by bot id=8286876591
+2026-07-19 20:19:58,204 - aiogram.event - INFO - Update id=59808712 is handled. Duration 113 ms by bot id=8286876591
+2026-07-19 20:20:02,845 - aiogram.event - INFO - Update id=59808713 is handled. Duration 243 ms by bot id=8286876591
+2026-07-19 20:20:03,613 - aiogram.event - INFO - Update id=59808714 is handled. Duration 107 ms by bot id=8286876591
+2026-07-19 20:20:06,296 - aiogram.event - INFO - Update id=59808715 is handled. Duration 97 ms by bot id=8286876591
+2026-07-19 20:20:07,639 - aiogram.event - INFO - Update id=59808716 is handled. Duration 172 ms by bot id=8286876591
+2026-07-19 20:20:08,445 - aiogram.event - INFO - Update id=59808717 is handled. Duration 94 ms by bot id=8286876591
+2026-07-19 20:20:10,489 - aiogram.event - INFO - Update id=59808718 is handled. Duration 65 ms by bot id=8286876591
+2026-07-19 20:47:32,531 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 20:47:32,531 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:47:32,531 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 20:47:32,783 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 20:47:35,508 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 20:47:35,512 - __main__ - INFO - Bot startup tasks...
+2026-07-19 20:47:35,515 - __main__ - INFO - Starting bot polling...
+2026-07-19 20:47:35,515 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 20:47:35,732 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:47:39,251 - aiogram.event - INFO - Update id=59808719 is handled. Duration 143 ms by bot id=8286876591
+2026-07-19 20:47:40,595 - aiogram.event - INFO - Update id=59808720 is handled. Duration 100 ms by bot id=8286876591
+2026-07-19 20:47:43,005 - aiogram.event - INFO - Update id=59808721 is handled. Duration 278 ms by bot id=8286876591
+2026-07-19 20:47:44,352 - aiogram.event - INFO - Update id=59808722 is handled. Duration 102 ms by bot id=8286876591
+2026-07-19 20:47:47,768 - aiogram.event - INFO - Update id=59808723 is handled. Duration 65 ms by bot id=8286876591
+2026-07-19 20:47:51,880 - aiogram.event - INFO - Update id=59808724 is handled. Duration 89 ms by bot id=8286876591
+2026-07-19 20:47:53,295 - aiogram.event - INFO - Update id=59808725 is handled. Duration 151 ms by bot id=8286876591
+2026-07-19 20:47:56,692 - aiogram.event - INFO - Update id=59808726 is handled. Duration 150 ms by bot id=8286876591
+2026-07-19 20:47:58,377 - aiogram.event - INFO - Update id=59808727 is handled. Duration 199 ms by bot id=8286876591
+2026-07-19 20:47:59,551 - aiogram.event - INFO - Update id=59808728 is handled. Duration 346 ms by bot id=8286876591
+2026-07-19 20:50:52,725 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 20:50:52,725 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:50:52,726 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 20:50:52,977 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 20:50:55,508 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 20:50:55,512 - __main__ - INFO - Bot startup tasks...
+2026-07-19 20:50:55,515 - __main__ - INFO - Starting bot polling...
+2026-07-19 20:50:55,515 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 20:50:55,673 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:50:58,709 - aiogram.event - INFO - Update id=59808729 is handled. Duration 151 ms by bot id=8286876591
+2026-07-19 20:50:59,837 - aiogram.event - INFO - Update id=59808730 is handled. Duration 121 ms by bot id=8286876591
+2026-07-19 20:51:00,898 - aiogram.event - INFO - Update id=59808731 is handled. Duration 185 ms by bot id=8286876591
+2026-07-19 20:51:03,102 - aiogram.event - INFO - Update id=59808732 is handled. Duration 102 ms by bot id=8286876591
+2026-07-19 20:51:07,259 - aiogram.event - INFO - Update id=59808733 is handled. Duration 115 ms by bot id=8286876591
+2026-07-19 20:51:09,046 - aiogram.event - INFO - Update id=59808734 is handled. Duration 154 ms by bot id=8286876591
+2026-07-19 20:51:11,531 - aiogram.event - INFO - Update id=59808735 is handled. Duration 242 ms by bot id=8286876591
+2026-07-19 20:51:13,060 - aiogram.event - INFO - Update id=59808736 is handled. Duration 140 ms by bot id=8286876591
+2026-07-19 20:51:35,550 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 20:51:35,550 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:51:35,551 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 20:51:35,801 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 20:51:38,338 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 20:51:38,345 - __main__ - INFO - Bot startup tasks...
+2026-07-19 20:51:38,345 - __main__ - INFO - Starting bot polling...
+2026-07-19 20:51:38,345 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 20:51:38,454 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:51:43,135 - aiogram.event - INFO - Update id=59808737 is handled. Duration 136 ms by bot id=8286876591
+2026-07-19 20:51:44,746 - aiogram.event - INFO - Update id=59808738 is handled. Duration 107 ms by bot id=8286876591
+2026-07-19 20:51:45,601 - aiogram.event - INFO - Update id=59808739 is handled. Duration 103 ms by bot id=8286876591
+2026-07-19 20:51:49,850 - aiogram.event - INFO - Update id=59808740 is handled. Duration 129 ms by bot id=8286876591
+2026-07-19 20:51:51,489 - aiogram.event - INFO - Update id=59808741 is handled. Duration 130 ms by bot id=8286876591
+2026-07-19 20:51:52,214 - aiogram.event - INFO - Update id=59808742 is handled. Duration 120 ms by bot id=8286876591
+2026-07-19 20:52:04,415 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 20:52:04,415 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:52:04,415 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 20:52:04,667 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 20:52:07,199 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 20:52:07,207 - __main__ - INFO - Bot startup tasks...
+2026-07-19 20:52:07,207 - __main__ - INFO - Starting bot polling...
+2026-07-19 20:52:07,207 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 20:52:07,359 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:52:07,845 - aiogram.event - INFO - Update id=59808743 is handled. Duration 176 ms by bot id=8286876591
+2026-07-19 20:52:09,269 - aiogram.event - INFO - Update id=59808744 is handled. Duration 105 ms by bot id=8286876591
+2026-07-19 20:52:10,038 - aiogram.event - INFO - Update id=59808745 is handled. Duration 128 ms by bot id=8286876591
+2026-07-19 20:54:28,777 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 20:54:28,777 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:54:28,778 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 20:54:29,029 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 20:54:31,161 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 20:54:31,168 - __main__ - INFO - Bot startup tasks...
+2026-07-19 20:54:31,168 - __main__ - INFO - Starting bot polling...
+2026-07-19 20:54:31,168 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 20:54:31,328 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:55:40,281 - aiogram.event - INFO - Update id=59808746 is handled. Duration 156 ms by bot id=8286876591
+2026-07-19 20:55:41,855 - aiogram.event - INFO - Update id=59808747 is handled. Duration 190 ms by bot id=8286876591
+2026-07-19 20:55:42,734 - aiogram.event - INFO - Update id=59808748 is handled. Duration 95 ms by bot id=8286876591
+2026-07-19 20:57:45,490 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 20:57:45,490 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:57:45,491 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 20:57:45,742 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 20:57:48,133 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 20:57:48,140 - __main__ - INFO - Bot startup tasks...
+2026-07-19 20:57:48,140 - __main__ - INFO - Starting bot polling...
+2026-07-19 20:57:48,140 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 20:57:48,330 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:57:51,001 - aiogram.event - INFO - Update id=59808749 is handled. Duration 196 ms by bot id=8286876591
+2026-07-19 20:57:52,393 - aiogram.event - INFO - Update id=59808750 is handled. Duration 110 ms by bot id=8286876591
+2026-07-19 20:57:53,393 - aiogram.event - INFO - Update id=59808751 is handled. Duration 139 ms by bot id=8286876591
+2026-07-19 20:58:01,108 - aiogram.event - INFO - Update id=59808752 is not handled. Duration 1 ms by bot id=8286876591
+2026-07-19 20:58:01,108 - aiogram.event - ERROR - Cause exception while process update id=59808752 by bot id=8286876591
+TypeError: enter_command() missing 1 required positional argument: 'command'
+Traceback (most recent call last):
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 195, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/app/middlewars/admin.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/app/callbacks/start.py", line 238, in send_command_text
+    await asyncio.to_thread(enter_command(), message.text)
+                            ~~~~~~~~~~~~~^^
+TypeError: enter_command() missing 1 required positional argument: 'command'
+2026-07-19 20:58:39,677 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 20:58:39,678 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:58:39,678 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 20:58:39,930 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 20:58:42,481 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 20:58:42,485 - __main__ - INFO - Bot startup tasks...
+2026-07-19 20:58:42,488 - __main__ - INFO - Starting bot polling...
+2026-07-19 20:58:42,488 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 20:58:42,604 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 20:58:45,100 - aiogram.event - INFO - Update id=59808753 is handled. Duration 134 ms by bot id=8286876591
+2026-07-19 20:58:46,743 - aiogram.event - INFO - Update id=59808754 is handled. Duration 101 ms by bot id=8286876591
+2026-07-19 20:58:47,788 - aiogram.event - INFO - Update id=59808755 is handled. Duration 101 ms by bot id=8286876591
+2026-07-19 20:58:50,793 - aiogram.event - INFO - Update id=59808756 is not handled. Duration 0 ms by bot id=8286876591
+2026-07-19 20:58:50,793 - aiogram.event - ERROR - Cause exception while process update id=59808756 by bot id=8286876591
+TypeError: 'coroutine' object is not callable
+Traceback (most recent call last):
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 320, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 164, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<7 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/error.py", line 27, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 58, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/fsm/middleware.py", line 43, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/dispatcher.py", line 283, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 195, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 167, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 159, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<4 lines>...
+    )
+    ^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/router.py", line 187, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/telegram.py", line 126, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/app/middlewars/admin.py", line 28, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/.venv/lib/python3.13/site-packages/aiogram/dispatcher/event/handler.py", line 71, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/dmitriy/projects/control_panel/app/callbacks/start.py", line 238, in send_command_text
+    await asyncio.to_thread(enter_command(message.text))
+  File "/home/dmitriy/.local/share/uv/python/cpython-3.13.11-linux-x86_64-gnu/lib/python3.13/asyncio/threads.py", line 25, in to_thread
+    return await loop.run_in_executor(None, func_call)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/dmitriy/.local/share/uv/python/cpython-3.13.11-linux-x86_64-gnu/lib/python3.13/concurrent/futures/thread.py", line 59, in run
+    result = self.fn(*self.args, **self.kwargs)
+TypeError: 'coroutine' object is not callable
+2026-07-19 21:09:01,243 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 21:09:01,243 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 21:09:01,244 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 21:09:01,495 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 21:09:04,124 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 21:09:04,131 - __main__ - INFO - Bot startup tasks...
+2026-07-19 21:09:04,131 - __main__ - INFO - Starting bot polling...
+2026-07-19 21:09:04,131 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 21:09:04,284 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 21:09:12,299 - aiogram.event - INFO - Update id=59808757 is handled. Duration 168 ms by bot id=8286876591
+2026-07-19 21:09:13,894 - aiogram.event - INFO - Update id=59808758 is handled. Duration 277 ms by bot id=8286876591
+2026-07-19 21:09:14,507 - aiogram.event - INFO - Update id=59808759 is handled. Duration 113 ms by bot id=8286876591
+2026-07-19 21:10:10,869 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 21:10:10,870 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 21:10:10,870 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 21:10:11,122 - aiogram.event - INFO - Update id=59808760 is handled. Duration 53572 ms by bot id=8286876591
+2026-07-19 21:10:11,122 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
+2026-07-19 21:10:14,575 - __main__ - INFO - Loaded environment variables from /home/dmitriy/projects/control_panel/.env
+2026-07-19 21:10:14,584 - __main__ - INFO - Bot startup tasks...
+2026-07-19 21:10:14,584 - __main__ - INFO - Starting bot polling...
+2026-07-19 21:10:14,584 - aiogram.dispatcher - INFO - Start polling
+2026-07-19 21:10:14,694 - aiogram.dispatcher - INFO - Run polling for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 21:10:18,285 - aiogram.event - INFO - Update id=59808761 is handled. Duration 165 ms by bot id=8286876591
+2026-07-19 21:10:24,100 - aiogram.event - INFO - Update id=59808762 is handled. Duration 100 ms by bot id=8286876591
+2026-07-19 21:10:25,564 - aiogram.event - INFO - Update id=59808763 is handled. Duration 110 ms by bot id=8286876591
+2026-07-19 21:10:47,632 - aiogram.event - INFO - Update id=59808764 is handled. Duration 1978 ms by bot id=8286876591
+2026-07-19 21:11:05,457 - aiogram.dispatcher - WARNING - Received SIGINT signal
+2026-07-19 21:11:05,458 - aiogram.dispatcher - INFO - Polling stopped for bot @eStatya_bot id=8286876591 - 'еСтаття'
+2026-07-19 21:11:05,458 - aiogram.dispatcher - INFO - Polling stopped
+2026-07-19 21:11:05,709 - __main__ - INFO - Shutdown initiated. Cleaning up resources...
